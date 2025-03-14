@@ -1,5 +1,5 @@
 {
-  "name": "fc",
+  "name": "file-converter-cli",
   "type": "module",
   "version": "1.0.0",
   "description": "A file converter in your terminal.",
