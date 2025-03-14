@@ -1,8 +1,35 @@
 {
   "name": "fc",
-  "module": "index.ts",
   "type": "module",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A file converter in your terminal.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "fc": "dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "build:exec": "bun build ./src/index.ts --compile --outfile ./dist/fc --target node",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:all": "bun run build && bun run build:exec && bun run build:types",
+    "prepublish": "bun run build:all",
+    "start": "bun run dist/index.js",
+    "dev": "bun run src/index.ts"
+  },
+  "keywords": [
+    "file-conversion",
+    "typescript",
+    "javascript",
+    "bun",
+    "cli"
+  ],
+  "author": {
+    "name": "Guilherme Galaverna",
+    "email": "guigalaverna@gmail.com",
+    "url": "https://github.com/galavernag"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest"
   },
