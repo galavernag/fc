@@ -1,12 +1,12 @@
 {
   "name": "file-converter-cli",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A file converter in your terminal.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "fcl": "dist/index.js"
+    "fcl": "./dist/fcl"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target node",
