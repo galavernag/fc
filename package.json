@@ -1,16 +1,16 @@
 {
   "name": "file-converter-cli",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A file converter in your terminal.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "fc": "dist/index.js"
+    "fcl": "dist/index.js"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target node",
-    "build:exec": "bun build ./src/index.ts --compile --outfile ./dist/fc --target node",
+    "build:exec": "bun build ./src/index.ts --compile --outfile ./dist/fcl --target node",
     "build:types": "tsc --emitDeclarationOnly",
     "build:all": "bun run build && bun run build:exec && bun run build:types",
     "prepublish": "bun run build:all",
