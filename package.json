@@ -15,6 +15,7 @@
     "build:all": "bun run build && bun run build:exec && bun run build:types",
     "prepublish": "bun run build:all",
     "start": "bun run dist/index.js",
+    "test": "bun test",
     "dev": "bun run src/index.ts"
   },
   "keywords": [

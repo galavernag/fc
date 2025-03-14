@@ -9,8 +9,8 @@ const OptionSchema = z.object({
 export const ConverterSchema = z.object({
   name: z.string(),
   description: z.string(),
-  sourceFormats: z.array(z.string()),
-  targetFormats: z.array(z.string()),
+  sourceFormats: z.array(z.string()).min(1, "Source formats cannot be empty"),
+  targetFormats: z.array(z.string()).min(1, "Target formats cannot be empty"),
   convert: z
     .function()
     .args(z.string(), z.string(), z.record(z.string(), z.any().optional()))
