@@ -1,7 +1,7 @@
 {
   "name": "file-converter-cli",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A file converter in your terminal.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
